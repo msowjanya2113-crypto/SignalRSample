@@ -1,5 +1,8 @@
-var builder = WebApplication.CreateBuilder(args);
+using SignalRSample.Hubs;
 
+var builder = WebApplication.CreateBuilder(args);
+//for signalR
+builder.Services.AddSignalR();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
@@ -23,5 +26,6 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
+//here add to route the hub
+app.MapHub<UserHub>("/hubs/userCount");
 app.Run();

@@ -1,8 +1,19 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+﻿@* inside this class give the code to display the views  *@
+<div class="container">
+    <div class="row">
+        <div class="col-3">Total Views :</div>
+        <div class="col-4">
+            <span id="totalViewsCount"></span>
+        </div>
+    </div>
+     <div class="row">
+        <div class="col-3">Total Users :</div>
+        <div class="col-4">
+            <span id="totalUsersCount"></span>
+        </div>
+    </div>
 </div>
+@*now add the script to connect to the SignalR hub and update the total views count *@
+@*here <script src="~/js/signalr.js"></script> add the folder where ur signalr  .js file is located *@
+<script src="~/js/signalr.js"></script>
+<script src="~/js/userCount.js"></script>
