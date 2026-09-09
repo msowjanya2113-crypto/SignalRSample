@@ -28,4 +28,6 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 //here add to route the hub
 app.MapHub<UserHub>("/hubs/userCount");
+//add here the route for DeathlyHallow hub
+app.MapHub<DeathlyHallowsHub>("/hubs/deathlyHallow");
 app.Run();
