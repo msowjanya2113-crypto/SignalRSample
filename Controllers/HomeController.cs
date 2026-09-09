@@ -30,7 +30,7 @@ namespace SignalRSample.Controllers
         {
             //to increment the value of the type in the dictionary we will check if the type is present in the dictionary and if it is present we will increment the value of that type in the dictionary and return the updated value to the client side
             if (SD.DealthyHallowRace.ContainsKey(type)) 
-            {
+            { 
                 SD.DealthyHallowRace[type]++;
             }
             //here add an notification for the client side to get the updated value of the type in the dictionary and return it to the client side
